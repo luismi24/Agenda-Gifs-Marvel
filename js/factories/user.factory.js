@@ -22,17 +22,20 @@
                 id: 0,
                 name: 'luismi',
                 aka: 'sedas',
-                phone: '654987312'
+                age: '27',
+                photo: 'http://placehold.it/200x200'
             },{
                 id: 1,
                 name: 'ofiejio',
                 aka: 'asdfefef',
-                phone: '654321897'
+                age: '27',
+                photo: 'http://placehold.it/200x200'
             },{
                 id: 2,
                 name: 'ewrtwert',
                 aka: 'ghgvcbxcb',
-                phone: '666333999'
+                age: '27',
+                photo: 'http://placehold.it/200x200'
             }];
         }
         function get(userId){

@@ -1,15 +1,54 @@
 <div class="container">
-    <div class="col-xs-8 text-center">presentacion de Datos
+    <div class="col-xs-8 text-center">
         <div ng-repeat="user in users track by user.id">
+            <img src="{{user.photo}}" alt="">
             <p>Nombre: {{user.name}}</p>
-            <p>Telefono: {{user.phone}}</p>
+            <p>Telefono: {{user.age}}</p>
             <p>A.K.A =>{{user.aka}}</p>
             <a class="btn btn-success" href="/users/{{user.id}}">Ver Perfil</a>
+            </br>
+            </br>
+            </br>
         </div>
     </div>
-    <div class="col-xs-4">sidebar
+    <div class="col-xs-4">
         <button class="btn btn-success">Datos</button>
         <button class="btn btn-success">Gifs</button>
         <button class="btn btn-success">Comics</button>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+
+        <div class="edit-panel">
+            <form name="editForm" novalidate>
+                <div class="row">
+                    <input placeholder="Introduce tu nombre" ng-model="newUser.name" type="text">
+                </div>
+
+                <div class="row">
+                    <input placeholder="Introduce tu aka" ng-model="newUser.aka" type="text">
+                </div>
+
+                <div class="row">
+                    <input placeholder="Introduce tu edad" ng-model="newUser.age" type="number">
+                </div>
+
+                <div class="row">
+                    <input placeholder="Introduce la URL de tu foto" ng-model="newUser.photo" type="photo">
+                </div>
+
+                <div class="row ">
+                    <!-- Boton para Borrar HAZLO -->
+                <button  ng-click="cancelUser()" class="btn btn-primary">Cancelar</button>
+                    <!-- Boton de Guardar/Modificar con condiciones HAZLO -->
+                    <button ng-if="!saveModify" ng-disabled="!isCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
+                    <button ng-if="saveModify" ng-click="updateUser(newUser)" ng-disabled="!isCompleted()" class="btn btn-primary">Modificar</button>
+                </div>
+
+            </form>
+        </div>
     </div>
 </div>

@@ -14,10 +14,8 @@
         ////////////////
 
         function activate() {
-            $scope.users = UserFactory.getAll();
-            function activate() {
-                $scope.users = UserFactory.get($routeParams.id);
-            }
+                $scope.user = UserFactory.get($routeParams.id);
+            
         }
     }
 })();
