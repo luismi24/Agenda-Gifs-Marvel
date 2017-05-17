@@ -13,7 +13,7 @@
                 templateUrl: '/views/home.html'
             })
         
-                .when("/userselected", {
+                .when("/users/:id", {
                 
                 controller: 'UserController',
                 templateUrl: '/views/user.html'
