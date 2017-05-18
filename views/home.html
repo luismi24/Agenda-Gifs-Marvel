@@ -13,9 +13,9 @@
         </div>
     </div>
     <div class="col-xs-4">
-        <button class="btn btn-success">Datos</button>
-        <button class="btn btn-success">Gifs</button>
-        <button class="btn btn-success">Comics</button>
+        <button ng-click="barselected='datos'" class="btn btn-success">Datos</button>
+        <button ng-click="barselected='gif'" class="btn btn-success">Gifs</button>
+        <button ng-click="barselected='comic'" class="btn btn-success">Comics</button>
 
 </br>
 </br>
@@ -23,7 +23,7 @@
 </br>
 </br>
 
-        <div class="edit-panel">
+        <div ng-show="barselected == 'datos'" class="edit-panel">
             <form name="editForm" novalidate>
                 <div class="row">
                     <input placeholder="Introduce tu nombre" ng-model="newUser.name" type="text">
@@ -52,7 +52,7 @@
 
             </form>
         </div>
-        <div class="gifs"></div>
-        <div class="comics"></div>
+        <div ng-show="barselected == 'gif'"class="gifs">gif de penes</div>
+        <div ng-show="barselected == 'comic'" class="comics">comics de penes dobles</div>
     </div>
 </div>

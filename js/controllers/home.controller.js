@@ -11,7 +11,7 @@
         $scope.addUser = addUser;
         $scope.userCompleted = userCompleted;
         $scope.eraseAll = eraseAll;
-        $scope.sideBar = sideBar;
+        $scope.barselected = 'datos';
 
         activate();
 
@@ -31,8 +31,6 @@
          function eraseAll(){
              UserFactory.eraseAll();
          }
-         function sideBar() {
-            if ()
-         }
+         
     }
 })();
