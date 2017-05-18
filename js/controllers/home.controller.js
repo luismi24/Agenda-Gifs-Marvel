@@ -5,14 +5,14 @@
         .module('dcesmejor')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', 'UserFactory', '$routeParams' ];
-    function HomeController($scope, UserFactory, $routeParams)  {
+    HomeController.$inject = ['$scope', 'UserFactory', '$routeParams', 'UserHttp' ];
+    function HomeController($scope, UserFactory, $routeParams, UserHttp)  {
         $scope.newUser = {};
         $scope.addUser = addUser;
         $scope.userCompleted = userCompleted;
         $scope.eraseAll = eraseAll;
         $scope.barselected = 'datos';
-
+        $scope.busquedaGifs = busquedaGifs;
         activate();
 
         ////////////////
@@ -32,5 +32,12 @@
              UserFactory.eraseAll();
          }
          
+         function busquedaGifs(){
+             var searchGifis = $scope.searchGifis;
+             UserHttp.searchGif(searchGifis).then(function(response){
+                 $scope.imgAnimadas = response;
+             })
+             
+         }
     }
 })();
