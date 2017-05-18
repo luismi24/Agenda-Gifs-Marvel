@@ -15,7 +15,7 @@
         return service;
 
         function searchGif(searchGifis) {
-            return $http.get("http://api.giphy.com/v1/gifs/search?q="+searchGifis+"&api_key=dc6zaTOxFJmzC")
+            return $http.get("http://api.giphy.com/v1/gifs/search?q="+searchGifis+"&limit=8&api_key=dc6zaTOxFJmzC")
                 .then(function(response){
                     var gifis = [];
                     response.data.data.forEach(function(element) {
