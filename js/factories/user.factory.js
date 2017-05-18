@@ -11,7 +11,8 @@
         var service = {
             getAll: getAll,
             get: get,
-            addUser: addUser
+            addUser: addUser,
+            eraseAll: eraseAll
         };
         
         return service;
@@ -24,12 +25,17 @@
                 if (typeof actualUsers == 'object' && actualUsers instanceof Array)
                     return actualUsers;
                 else {
+                    return [];
 
                 }
+            } else {
+                return [];
             }
         }
                 
+        function eraseAll(){
             
+        }
         
 
         function get(userId){

@@ -1,5 +1,6 @@
 <div class="container">
     <div class="col-xs-8 text-center">
+        <button ng-click="eraseAll()"class="btn btn-success">Borrar todo</button>
         <div ng-repeat="user in users track by user.id">
             <img src="{{user.photo}}" alt="">
             <p>Nombre: {{user.name}}</p>
@@ -41,7 +42,8 @@
                 </div>
 
                 <div class="row ">
-                    <!-- Boton para Borrar HAZLO 
+                    
+                    <!-- Boton para Borrar HAZLO
                     <button  ng-click="cancelUser()" class="btn btn-primary">Cancelar</button>
                      Boton de Guardar/Modificar con condiciones HAZLO -->
                     <button   ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>

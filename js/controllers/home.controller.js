@@ -10,6 +10,7 @@
         $scope.newUser = {};
         $scope.addUser = addUser;
         $scope.userCompleted = userCompleted;
+        $scope.eraseAll = eraseAll;
 
         activate();
 
@@ -26,5 +27,8 @@
              return $scope.editForm.$valid;
          }
          
+         function eraseAll(){
+             UserFactory.eraseAll();
+         }
     }
 })();
