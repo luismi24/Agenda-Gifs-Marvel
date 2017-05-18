@@ -15,7 +15,10 @@
 
         function activate() {
                 $scope.user = UserFactory.get($routeParams.id);
-            
         }
+        
+        function addUser(){
+             UserFactory.addUser($scope.newUser);
+         }
     }
 })();

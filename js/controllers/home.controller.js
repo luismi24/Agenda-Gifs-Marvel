@@ -11,6 +11,7 @@
         $scope.addUser = addUser;
         $scope.userCompleted = userCompleted;
         $scope.eraseAll = eraseAll;
+        $scope.sideBar = sideBar;
 
         activate();
 
@@ -29,6 +30,9 @@
          
          function eraseAll(){
              UserFactory.eraseAll();
+         }
+         function sideBar() {
+            if ()
          }
     }
 })();
