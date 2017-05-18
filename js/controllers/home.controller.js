@@ -13,6 +13,7 @@
         $scope.eraseAll = eraseAll;
         $scope.barselected = 'datos';
         $scope.busquedaGifs = busquedaGifs;
+        $scope.gifis = [];
         activate();
 
         ////////////////
@@ -35,7 +36,7 @@
          function busquedaGifs(){
              var searchGifis = $scope.searchGifis;
              UserHttp.searchGif(searchGifis).then(function(response){
-                 $scope.imgAnimadas = response;
+                 $scope.gifis = response;
              })
              
          }

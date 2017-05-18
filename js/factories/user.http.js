@@ -19,7 +19,7 @@
                 .then(function(response){
                     var gifis = [];
                     response.data.data.forEach(function(element) {
-                        gifis.push(element.images.original.url)
+                        gifis.push(element.images.original.url);
                     }); return gifis;
                 })
         }
