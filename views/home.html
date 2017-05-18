@@ -55,8 +55,11 @@
         <div ng-show="barselected == 'gif'"class="gifs">
         <input ng-model="searchGifis" placeholder="gif">
         <button ng-click="busquedaGifs()">Buscar</button>
+        <div>
+            <img ng-repeat="gif in gifs" src="{{newUser.gifs}}" height="75px" width="75" alt="">
+        </div>
         <div >
-            <img ng-click="gifFavs()" ng-repeat="gifi in gifis" src="{{gifi}}" height="75px" width="75px" alt="">
+            <img ng-click="gifFavs(gifi)" ng-repeat="gifi in gifis" src="{{gifi}}" height="75px" width="75px" alt="">
         </div>
         </div>
 

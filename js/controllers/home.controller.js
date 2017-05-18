@@ -14,6 +14,7 @@
         $scope.barselected = 'datos';
         $scope.busquedaGifs = busquedaGifs;
         $scope.gifis = [];
+        $scope.gifFavs = gifFavs;
         activate();
 
         ////////////////
@@ -39,6 +40,13 @@
                  $scope.gifis = response;
              })
              
+         }
+
+         function gifFavs(gifi){
+            if (!$scope.newUser.gifs){
+                $scope.newUser.gifs = [];
+            } 
+            $scope.newUser.gifs.push(gifi);
          }
     }
 })();
