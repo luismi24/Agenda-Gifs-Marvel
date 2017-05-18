@@ -7,7 +7,7 @@
 
     UserController.$inject = ['$scope', '$routeParams', 'UserFactory'];
     function UserController($scope, $routeParams, UserFactory) {
-        
+        $scope.addUser = addUser;
 
         activate();
 

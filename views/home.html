@@ -41,12 +41,12 @@
                 </div>
 
                 <div class="row ">
-                    <!-- Boton para Borrar HAZLO -->
-                <button  ng-click="cancelUser()" class="btn btn-primary">Cancelar</button>
-                    <!-- Boton de Guardar/Modificar con condiciones HAZLO -->
-                    <button ng-if="!saveModify" ng-disabled="!isCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
-                    <button ng-if="saveModify" ng-click="updateUser(newUser)" ng-disabled="!isCompleted()" class="btn btn-primary">Modificar</button>
-                </div>
+                    <!-- Boton para Borrar HAZLO 
+                    <button  ng-click="cancelUser()" class="btn btn-primary">Cancelar</button>
+                     Boton de Guardar/Modificar con condiciones HAZLO -->
+                    <button   ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
+                    <!--<button ng-click="updateUser(newUser)" ng-disabled="!isCompleted()" class="btn btn-primary">Modificar</button>
+                --> </div>
 
             </form>
         </div>

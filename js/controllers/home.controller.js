@@ -7,7 +7,9 @@
 
     HomeController.$inject = ['$scope', 'UserFactory', '$routeParams' ];
     function HomeController($scope, UserFactory, $routeParams)  {
-        
+        $scope.newUser = {};
+        $scope.addUser = addUser;
+        $scope.userCompleted = userCompleted;
 
         activate();
 
@@ -16,5 +18,13 @@
         function activate() {
             $scope.users = UserFactory.getAll();
          }
+         function addUser(){
+             UserFactory.addUser($scope.newUser);
+         }
+
+         function userCompleted(){
+             return $scope.editForm.$valid;
+         }
+         
     }
 })();
