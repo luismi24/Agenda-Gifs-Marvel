@@ -25,10 +25,10 @@
                 })
         }
         
-        function searchComic(searchComics) {
-            return $http.get("https://gateway.marvel.com:443/v1/public/comics?titleStartsWith="+searchComics+"&limit=8&apikey=42a60257ddfbdf634ed6612b871c472b")
+        function searchComic(searchComicis) {
+            return $http.get("https://gateway.marvel.com:443/v1/public/comics?titleStartsWith="+searchComicis+"&limit=8&apikey=42a60257ddfbdf634ed6612b871c472b")
                 .then(function(response){
-                    var comics = [];
+                    var comicis = [];
                     var img = '';
                     response.data.data.results.forEach(function(element,) {
                         console.log(element);
@@ -40,9 +40,9 @@
                         } else if (element.images == 0) {
                             img= 'http://placehold.it/150x150';
                         }
-                        comics.push(img);
+                        comicis.push(img);
                         img= '';
-                    }); return comics;
+                    }); return comicis;
                 })
         }
     }

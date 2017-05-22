@@ -54,19 +54,22 @@
         </div>
         <div ng-show="barselected == 'gif'"class="gifs">
             <div>
-                <img ng-repeat="gif in newUser.gifs" src="{{gif}}" height="75px" width="75" alt="">
+                <img ng-repeat="gif in newUser.gifs" src="{{gif}}" height="75px" width="75px" alt="">
             </div>
             <input ng-model="searchGifis" placeholder="gif">
             <button ng-click="busquedaGifs()">Buscar</button>
-            <div >
+            <div>
             <img ng-click="gifFavs(gifi)" ng-repeat="gifi in gifis" src="{{gifi}}" height="75px" width="75px" alt="">
             </div>
         </div>
 
         <div ng-show="barselected == 'comic'" class="comics">
-            <input ng-model="searchComics" placeholder="comics">
+        <div>
+            <img ng-repeat="palabra in newUser.comics" src"{{palabra}}" height="150px" width="100px" alt="">
+        </div>
+            <input ng-model="searchComicis" placeholder="comics">
             <button ng-click="busquedaComics()">Buscar</button>
-            <img ng-repeat="comic in comics" src="{{comic}}" height="200px" width="100px" alt="">
+            <img ng-click="comicFavs(comici)" ng-repeat="comici in comicis" src="{{comici}}" height="150px" width="100px" alt="">
         </div>
         <button ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
     </div>

@@ -16,6 +16,8 @@
         $scope.gifis = [];
         $scope.gifFavs = gifFavs;
         $scope.busquedaComics= busquedaComics;
+        $scope.comicFavs= comicFavs;
+        $scope.comicis = [];
         activate();
 
         ////////////////
@@ -43,9 +45,9 @@
              
          }
          function busquedaComics(){
-             var searchComics = $scope.searchComics;
-             UserHttp.searchComic(searchComics).then(function(response){
-                 $scope.comics = response;
+             var searchComicis = $scope.searchComicis;
+             UserHttp.searchComic(searchComicis).then(function(response){
+                 $scope.comicis = response;
              })
              
          }
@@ -56,6 +58,14 @@
             } 
             $scope.newUser.gifs.push(gifi);
             console.log($scope.newUser.gifs);
+         }
+
+         function comicFavs(comici){
+            if (!$scope.newUser.comics){
+                $scope.newUser.comics = [];
+            } 
+            $scope.newUser.comics.push(comici);
+            console.log($scope.newUser.comics);
          }
     }
 })();
