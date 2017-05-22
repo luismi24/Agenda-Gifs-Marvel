@@ -63,8 +63,10 @@
             </div>
         </div>
 
-        <div ng-show="barselected == 'comic'" class="comics">comics 
-
+        <div ng-show="barselected == 'comic'" class="comics">
+            <input ng-model="searchComics" placeholder="comics">
+            <button ng-click="busquedaComics()">Buscar</button>
+            <img ng-repeat="comic in comics" src="{{comic}}" height="200px" width="100px" alt="">
         </div>
         <button ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
     </div>

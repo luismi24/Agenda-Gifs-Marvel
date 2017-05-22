@@ -15,6 +15,7 @@
         $scope.busquedaGifs = busquedaGifs;
         $scope.gifis = [];
         $scope.gifFavs = gifFavs;
+        $scope.busquedaComics= busquedaComics;
         activate();
 
         ////////////////
@@ -38,6 +39,13 @@
              var searchGifis = $scope.searchGifis;
              UserHttp.searchGif(searchGifis).then(function(response){
                  $scope.gifis = response;
+             })
+             
+         }
+         function busquedaComics(){
+             var searchComics = $scope.searchComics;
+             UserHttp.searchComic(searchComics).then(function(response){
+                 $scope.comics = response;
              })
              
          }
