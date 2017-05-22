@@ -47,6 +47,7 @@
                 $scope.newUser.gifs = [];
             } 
             $scope.newUser.gifs.push(gifi);
+            console.log($scope.newUser.gifs);
          }
     }
 })();

@@ -46,23 +46,26 @@
                     <!-- Boton para Borrar HAZLO
                     <button  ng-click="cancelUser()" class="btn btn-primary">Cancelar</button>
                      Boton de Guardar/Modificar con condiciones HAZLO -->
-                    <button   ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
+                    
                     <!--<button ng-click="updateUser(newUser)" ng-disabled="!isCompleted()" class="btn btn-primary">Modificar</button>
                 --> </div>
 
             </form>
         </div>
         <div ng-show="barselected == 'gif'"class="gifs">
-        <input ng-model="searchGifis" placeholder="gif">
-        <button ng-click="busquedaGifs()">Buscar</button>
-        <div>
-            <img ng-repeat="gif in gifs" src="{{newUser.gifs}}" height="75px" width="75" alt="">
-        </div>
-        <div >
+            <div>
+                <img ng-repeat="gif in newUser.gifs" src="{{gif}}" height="75px" width="75" alt="">
+            </div>
+            <input ng-model="searchGifis" placeholder="gif">
+            <button ng-click="busquedaGifs()">Buscar</button>
+            <div >
             <img ng-click="gifFavs(gifi)" ng-repeat="gifi in gifis" src="{{gifi}}" height="75px" width="75px" alt="">
-        </div>
+            </div>
         </div>
 
-        <div ng-show="barselected == 'comic'" class="comics">comics </div>
+        <div ng-show="barselected == 'comic'" class="comics">comics 
+
+        </div>
+        <button ng-disabled="!userCompleted()" ng-click="addUser(newUser)" class="btn btn-success">Guardar</button>
     </div>
 </div>
