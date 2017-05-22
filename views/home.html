@@ -2,7 +2,7 @@
     <div class="col-xs-8 text-center">
         <button ng-click="eraseAll()"class="btn btn-success">Borrar todo</button>
         <div ng-repeat="user in users track by user.id">
-            <img src="{{user.photo}}" alt="">
+            <img src="{{user.photo}}" height="200px" width="200px" alt="">
             <p>Nombre: {{user.name}}</p>
             <p>Telefono: {{user.age}}</p>
             <p>A.K.A =>{{user.aka}}</p>
@@ -65,7 +65,7 @@
 
         <div ng-show="barselected == 'comic'" class="comics">
         <div>
-            <img ng-repeat="palabra in newUser.comics" src"{{palabra}}" height="150px" width="100px" alt="">
+            <img ng-repeat="palabra in newUser.comics" src="{{palabra}}" height="150px" width="100px" alt="">
         </div>
             <input ng-model="searchComicis" placeholder="comics">
             <button ng-click="busquedaComics()">Buscar</button>
